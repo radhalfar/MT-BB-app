@@ -6,4 +6,5 @@
     <string name="backButton">Zpět</string>
     <string name="likeButton">Oblíbený</string>
     <string name="nextButton">Další</string>
+    <string name="removeLikeButton">Odstranit</string>
 </resources>

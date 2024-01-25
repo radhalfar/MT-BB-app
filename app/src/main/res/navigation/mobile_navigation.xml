@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/navigation_search"
-        android:name="cz.fai.utb.mt_bb_app.ui.dashboard.DashboardFragment"
+        android:name="cz.fai.utb.mt_bb_app.ui.search.SearchFragment"
         android:label="@string/title_search"
         tools:layout="@layout/fragment_search" />
 
     <fragment
         android:id="@+id/navigation_favourites"
-        android:name="cz.fai.utb.mt_bb_app.ui.notifications.NotificationsFragment"
+        android:name="cz.fai.utb.mt_bb_app.ui.favourites.FavouritesFragment"
         android:label="@string/title_favourites"
         tools:layout="@layout/fragment_favourites" />
 </navigation>
