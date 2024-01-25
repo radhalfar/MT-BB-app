@@ -7,9 +7,26 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import cz.fai.utb.mt_bb_app.api.BreakingBadApiService
 import cz.fai.utb.mt_bb_app.databinding.ActivityMainBinding
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 
 class MainActivity : AppCompatActivity() {
+
+    val apiService: BreakingBadApiService by lazy {
+        val retrofit = Retrofit.Builder()
+            .baseUrl("")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        retrofit.create(BreakingBadApiService::class.java)
+    }
+
+    val repository: Repository by lazy {
+        Repository(apiService)
+    }
 
     private lateinit var binding: ActivityMainBinding
 
