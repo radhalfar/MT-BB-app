@@ -3,4 +3,7 @@
     <string name="title_home">Domů</string>
     <string name="title_search">Vyhledat</string>
     <string name="title_favourites">Oblíbené</string>
+    <string name="backButton">Zpět</string>
+    <string name="likeButton">Oblíbený</string>
+    <string name="nextButton">Další</string>
 </resources>
