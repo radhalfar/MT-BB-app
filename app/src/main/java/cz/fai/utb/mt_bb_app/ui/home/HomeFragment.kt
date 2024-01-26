@@ -32,14 +32,28 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        homeViewModel.breakingBadQuote.observe(viewLifecycleOwner, { bbq ->
+            // Update the UI with the new quote
+            binding.textHome.text = bbq.quote + "\n- " + bbq.author
+        })
+
         binding.viewModel = homeViewModel
-        binding.lifecycleOwner = this
+        /*binding.lifecycleOwner = this*/
 
         /*val textView: TextView = binding.textHome
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }*/
+
+
+
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        /*homeViewModel.getBBQuote()*/
     }
 
     override fun onDestroyView() {

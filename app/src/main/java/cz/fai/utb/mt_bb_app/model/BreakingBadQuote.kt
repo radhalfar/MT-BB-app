@@ -4,3 +4,7 @@ data class BreakingBadQuote (
     val quote: String,
     val author: String,
 )
+
+data class BreakingBadQuoteList(
+    val quotes: List<BreakingBadQuote>
+)

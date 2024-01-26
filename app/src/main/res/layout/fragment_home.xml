@@ -40,10 +40,10 @@
             android:layout_width="match_parent"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_height="82dp"
+            android:layout_height="100dp"
             android:textAlignment="center"
             android:textSize="20sp"
-            android:text="@{ viewModel.breakingBadQuote.quote }"/>
+            android:text="@{viewModel.breakingBadQuote.quote}"/>
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -52,18 +52,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:orientation="horizontal">
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/previousButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/backButton" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -87,7 +75,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/nextButton" />
+                android:text="@string/nextButton"
+                android:onClick="@{ () -> viewModel.getBBQuote() }"/>
 
             <Space
                 android:layout_width="wrap_content"
