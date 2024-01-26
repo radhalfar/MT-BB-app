@@ -15,18 +15,7 @@ import retrofit2.create
 
 class MainActivity : AppCompatActivity() {
 
-    val apiService: BreakingBadApiService by lazy {
-        val retrofit = Retrofit.Builder()
-            .baseUrl("")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
 
-        retrofit.create(BreakingBadApiService::class.java)
-    }
-
-    val repository: Repository by lazy {
-        Repository(apiService)
-    }
 
     private lateinit var binding: ActivityMainBinding
 
